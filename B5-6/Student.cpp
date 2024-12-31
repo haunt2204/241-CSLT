@@ -50,13 +50,15 @@ void xuatDsSv(const long mssv[], const string hoTen[], const double diemGk[], co
 }
 
 int timKiem(const long mssv[], const int siSo, const long id) {
+	int res = -1;
 	for (int i = 0; i < siSo; i++) {
 		if (mssv[i] == id) {
-			return i;
+			res = i;
+			break;
 		}
 	}
 	
-	return -1;//Truong hop khong tim thay
+	return res;
 }
 
 //Gia su trong danh sach khong co nguoi trung ten
